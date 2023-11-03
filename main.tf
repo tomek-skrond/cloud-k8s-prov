@@ -55,7 +55,7 @@ resource "google_compute_instance" "dev" {
   name         = each.value.name
   machine_type = "e2-standard-2"
   zone         = var.zone
-  tags         = ["http-server", "https-server", "ssh"]
+  tags         = ["http-server", "https-server", "ssh", "cluster-node"]
 
   boot_disk {
     initialize_params {
